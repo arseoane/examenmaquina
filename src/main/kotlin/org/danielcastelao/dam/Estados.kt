@@ -4,5 +4,9 @@ sealed class Estados {
     object Idle : Estados()
     object MovingUP : Estados()
     object MovingDOWN : Estados()
-    data class Error(val mensaje: String) : Estados()
+    data class Error(val mensaje: String) : Estados(){
+        init{
+            println("Error: $mensaje")
+        }
+    }
 }
