@@ -8,7 +8,7 @@ var estado_actual: Estados = Estados.Idle
 /**
  * Gestiona el cambio de estados
  */
-fun gestor(): Int {
+fun gestor(nivel_0: Boolean,nivel_1: Boolean): Int {
     when (estado_actual) {
         is Estados.Idle -> {
             nivel_actual = 0
