@@ -40,7 +40,7 @@ class GestorTest {
 
     @Test
     fun `gestor establece el nivel de error cuando el estado es Error`() {
-        estado_actual = Estados.Error
+        estado_actual = Estados.Error("")
         nivel_actual = 5
 
         assertEquals(-1, gestor(false,false,true))
