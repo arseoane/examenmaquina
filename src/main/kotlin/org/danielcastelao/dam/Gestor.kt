@@ -11,20 +11,20 @@ var estado_actual: Estados = Estados.Idle
 fun gestor(nivel_0: Boolean,nivel_1: Boolean,movimiento: Boolean,error: Boolean = false): Int {
     when (estado_actual) {
         is Estados.Idle -> {
-            if (nivel_0) {
+            if (nivel_0 && !movimiento) {
                 nivel_actual = 0
             }
-            else if (nivel_1) {
+            else if (nivel_1 && !movimiento) {
                 nivel_actual = 1
             }
             return nivel_actual
         }
         is Estados.MovingUP -> {
-            nivel_actual = if (nivel_1 && movimiento) 2 else 0
+            nivel_actual = if (nivel_1 and movimiento) 2 else 0
             return nivel_actual
         }
         is Estados.MovingDOWN -> {
-            nivel_actual = if (nivel_0 && movimiento) 2 else 0
+            nivel_actual = if (nivel_0 and movimiento) 2 else 0
             return nivel_actual
         }
         is Estados.Error -> {

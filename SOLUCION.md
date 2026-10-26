@@ -4,6 +4,9 @@
 ### Implementado mensaje de error en *Error*
 ![img_2.png](img_2.png)
 
+### Test de funcionamiento
+![img_1.png](img_1.png)
+
 ### Diagrama:
 ```mermaid
 stateDiagram-v2

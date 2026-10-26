@@ -16,7 +16,7 @@ class GestorTest {
         estado_actual = Estados.Idle
         nivel_actual = 5
 
-        assertEquals(0, gestor(false,false,false))
+        assertEquals(0, gestor(true,false,false))
         assertEquals(0, nivel_actual)
     }
 
@@ -43,7 +43,7 @@ class GestorTest {
         estado_actual = Estados.Error("")
         nivel_actual = 5
 
-        assertEquals(-1, gestor(false,false,true,false))
+        assertEquals(-1, gestor(false,false,false,true))
         assertEquals(-1, nivel_actual)
     }
 }
