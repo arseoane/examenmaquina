@@ -2,7 +2,7 @@
 ![img.png](img.png)
 
 ### Implementado mensaje de error en *Error*
-![img_1.png](img_1.png)
+![img_2.png](img_2.png)
 
 ### Diagrama:
 ```mermaid
