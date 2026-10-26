@@ -7,13 +7,13 @@ import kotlin.test.assertEquals
 class GestorTest {
     @AfterTest
     fun restaurarEstado() {
-        estado_acual = Estados.Idle
+        estado_actual = Estados.Idle
         nivel_actual = 0
     }
 
     @Test
     fun `gestor reinicia el nivel cuando el estado es Idle`() {
-        estado_acual = Estados.Idle
+        estado_actual = Estados.Idle
         nivel_actual = 5
 
         assertEquals(0, gestor())
@@ -22,7 +22,7 @@ class GestorTest {
 
     @Test
     fun `gestor establece el nivel cuando el estado es MovingUP`() {
-        estado_acual = Estados.MovingUP
+        estado_actual = Estados.MovingUP
         nivel_actual = 5
 
         assertEquals(2, gestor())
@@ -31,7 +31,7 @@ class GestorTest {
 
     @Test
     fun `gestor establece el nivel cuando el estado es MovingDOWN`() {
-        estado_acual = Estados.MovingDOWN
+        estado_actual = Estados.MovingDOWN
         nivel_actual = 5
 
         assertEquals(2, gestor())
@@ -40,7 +40,7 @@ class GestorTest {
 
     @Test
     fun `gestor establece el nivel de error cuando el estado es Error`() {
-        estado_acual = Estados.Error
+        estado_actual = Estados.Error
         nivel_actual = 5
 
         assertEquals(-1, gestor())
